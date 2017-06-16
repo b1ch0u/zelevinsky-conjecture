@@ -4,7 +4,7 @@ interval_re = re.compile('\\[(\\d+)[,\s]\s?(\\d+)\\]')
 
 def multisegment_from_str(s):
     ''' Parse a string representing a multisegment.
-    If the string does not represent a valid multisegment, [] is returned.
+    Any ill-formed segment will be ignored.
 
     >>> multisegment_from_str('[1,2]')
     [[1, 2]]
